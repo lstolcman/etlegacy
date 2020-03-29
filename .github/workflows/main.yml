@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
@@ -17,8 +17,9 @@ jobs:
             libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev \
             gcc-multilib g++-multilib \
             libx11-dev xorg-dev freeglut3-dev libudev-dev \
-            nasm \
-            --fix-missing
+            libsdl-dev \
+            nasm
+            # --fix-missing
       # - name: Install cmake deps
       #   working-directory: ./
       #   run: |
