@@ -28,7 +28,7 @@ jobs:
             libsndfile-dev libudev-dev libasound2-dev libjpeg8-dev libwebp-dev automake libgl1-mesa-glx \
             libjpeg-turbo8 libogg0 libopenal1 libvorbis0a libvorbisfile3 zlib1g libx11-dev \
             libglew-dev libegl1-mesa-dev \
-            libpng-dev \
+            libpng16-dev libpng16-16 \
             nasm autoconf git cmake zip gcc g++ libtool libxrandr-dev x11proto-randr-dev
       - name: Install cmake deps
         working-directory: ./
