@@ -13,10 +13,12 @@ jobs:
         run: |
           sudo apt-get install libgl1-mesa-dev --fix-missing
       - name: Install cmake deps
+        working-directory: ./
         run: |
           mkdir build
           cd build
           cmake ..
       - name: Build
+        working-directory: ./build
         run: |
           make
