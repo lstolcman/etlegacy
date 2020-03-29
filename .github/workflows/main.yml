@@ -16,13 +16,13 @@ jobs:
             libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev \
             gcc-multilib g++-multilib \
             --fix-missing
-      - name: Install cmake deps
-        working-directory: ./
-        run: |
-          mkdir build
-          cd build
-          cmake -DFEATURE_CURL=OFF ..
+      # - name: Install cmake deps
+      #   working-directory: ./
+      #   run: |
+      #     mkdir build
+      #     cd build
+      #     cmake -DFEATURE_CURL=OFF ..
       - name: Build
-        working-directory: ./
+        # working-directory: ./
         run: |
           ./easyinstall.sh
