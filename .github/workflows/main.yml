@@ -14,7 +14,9 @@ jobs:
           sudo apt-get install \
             libc6-dev-i386 \
             libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev \
+            libx11-dev \
             gcc-multilib g++-multilib \
+            nasm \
             --fix-missing
       # - name: Install cmake deps
       #   working-directory: ./
