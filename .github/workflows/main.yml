@@ -23,6 +23,6 @@ jobs:
           cd build
           cmake -DFEATURE_CURL=OFF ..
       - name: Build
-        working-directory: ./build
+        working-directory: ./
         run: |
-          make
+          ./easyinstall.sh
