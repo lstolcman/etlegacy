@@ -21,7 +21,7 @@ jobs:
         run: |
           mkdir build
           cd build
-          cmake ..
+          cmake -DFEATURE_CURL=OFF ..
       - name: Build
         working-directory: ./build
         run: |
