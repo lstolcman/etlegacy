@@ -11,7 +11,7 @@ jobs:
           submodules: true
       - name: Install system deps
         run: |
-          sudo apt-get install libgl1-mesa-dev --fix-missing
+          sudo apt-get install libgl1-mesa-dev libc6-dev-i386 --fix-missing
       - name: Install cmake deps
         working-directory: ./
         run: |
