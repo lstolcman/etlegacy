@@ -26,8 +26,8 @@ jobs:
           # sudo apt-get install gcc-multilib g++-multilib multiarch-support
           sudo apt-get install build-essential libfreeimage-dev libopenal-dev libpango1.0-dev \
             libsndfile-dev libudev-dev libasound2-dev libjpeg8-dev libwebp-dev automake libgl1-mesa-glx \
-            libjpeg-turbo8 libogg0 libopenal1 libvorbis0a libvorbisfile3 zlib1g libraspberrypi0 \
-            libraspberrypi-bin libraspberrypi-dev libx11-dev libglew-dev libegl1-mesa-dev \
+            libjpeg-turbo8 libogg0 libopenal1 libvorbis0a libvorbisfile3 zlib1g libx11-dev \
+            libglew-dev libegl1-mesa-dev \
             nasm autoconf git cmake zip gcc g++ libtool libxrandr-dev x11proto-randr-dev
       - name: Install cmake deps
         working-directory: ./
