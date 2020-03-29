@@ -16,6 +16,7 @@ jobs:
             libc6-dev-i386 \
             libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev \
             gcc-multilib g++-multilib \
+            xorg-dev \
             nasm \
             --fix-missing
       # - name: Install cmake deps
