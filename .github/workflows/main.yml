@@ -19,13 +19,15 @@ jobs:
             libx11-dev xserver-xorg-dev xorg-dev freeglut3-dev libudev-dev \
             nasm
             # --fix-missing
-      # - name: Install cmake deps
-      #   working-directory: ./
-      #   run: |
-      #     mkdir build
-      #     cd build
-      #     cmake -DFEATURE_CURL=OFF ..
-      - name: Build
-        # working-directory: ./
+      - name: Install cmake deps
+        working-directory: ./
         run: |
-          ./easybuild.sh
+          mkdir build
+          cd build
+          cmake -DFEATURE_CURL=OFF ..
+      - name: Build
+        working-directory: ./build
+        run: |
+          make
+        # run: |
+        # ./easybuild.sh
