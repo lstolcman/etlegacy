@@ -1,0 +1,27 @@
+name: Docker-compose Actions Workflow - jekyll blog
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download repo
+        uses: actions/checkout@v1
+
+      # - name: cache action
+      # - uses: actions/cache@v1
+      #   with:
+      #     path: ${{ github.workspace }}/vendor/bundle
+      #     key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-gems-
+
+      - name: Checkout submodules
+        uses: srt32/git-actions@v0.0.3
+        with:
+          args: git submodule update --init --recursive
+
+      - name: Build
+        run: |
+          ./easybuild.sh
