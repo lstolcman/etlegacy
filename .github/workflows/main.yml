@@ -34,7 +34,7 @@ jobs:
         run: |
           mkdir build
           cd build
-          cmake -DFEATURE_CURL=OFF -D ..
+          cmake -DFEATURE_CURL=OFF ..
       - name: Build
         working-directory: ./build
         run: |
