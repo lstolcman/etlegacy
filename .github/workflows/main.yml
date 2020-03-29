@@ -11,7 +11,11 @@ jobs:
           submodules: true
       - name: Install system deps
         run: |
-          sudo apt-get install libgl1-mesa-dev libc6-dev-i386 libglu1-mesa-dev freeglut3-dev --fix-missing
+          sudo apt-get install \
+            libc6-dev-i386 \
+            libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev \
+            gcc-multilib g++-multilib \
+            --fix-missing
       - name: Install cmake deps
         working-directory: ./
         run: |
