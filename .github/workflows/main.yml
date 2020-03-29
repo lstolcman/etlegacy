@@ -14,7 +14,7 @@ jobs:
           sudo apt-get install \
             libc6-dev-i386 \
             libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev \
-            libx11-dev \
+            libx11-dev libx11-devel \
             gcc-multilib g++-multilib \
             nasm \
             --fix-missing
