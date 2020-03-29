@@ -24,4 +24,5 @@ jobs:
       #     cmake -DFEATURE_CURL=OFF ..
       - name: Build
         # working-directory: ./
-        run: easybuild.sh
+        run: |
+          ./easybuild.sh
