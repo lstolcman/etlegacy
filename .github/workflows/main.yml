@@ -22,14 +22,14 @@ jobs:
 
           sudo apt-get install build-essential cmake libjpeg-dev \
             libcurl4-openssl-dev libogg-dev libsdl2-dev \
-            libsdl2-2.0.0 libsdl2-dev libglew-dev libjpeg-turbo8 liblua5.1-0-dev libpng-dev
+            libsdl2-dev libglew-dev libjpeg-turbo8 liblua5.1-0-dev libpng-dev
           sudo apt-get install gcc-multilib g++-multilib multiarch-support
       - name: Install cmake deps
         working-directory: ./
         run: |
           mkdir build
           cd build
-          cmake -DFEATURE_CURL=OFF ..
+          cmake -DFEATURE_CURL=OFF -D ..
       - name: Build
         working-directory: ./build
         run: |
