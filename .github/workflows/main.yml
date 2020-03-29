@@ -19,6 +19,12 @@ jobs:
             libx11-dev xserver-xorg-dev xorg-dev freeglut3-dev libudev-dev \
             nasm
             # --fix-missing
+
+          sudo apt-get install build-essential cmake libjpeg-dev \
+            libcurl4-openssl-dev libogg-dev libsdl2-dev \
+            libsdl2-2.0-0:i386 libglew-dev libglew1.8 libglu1-mesa:i386 \
+            libjpeg-turbo8:i386 liblua5.1-0-dev libts-dev libts-0.0-0:i386
+          sudo apt-get install gcc-multilib g++-multilib multiarch-support
       - name: Install cmake deps
         working-directory: ./
         run: |
